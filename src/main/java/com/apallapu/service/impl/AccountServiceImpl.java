@@ -15,7 +15,7 @@ public class AccountServiceImpl implements AccountService {
 
 	private static final Logger LOG = LoggerFactory.getLogger(AccountServiceImpl.class);
 
-	@Cacheable
+	@Cacheable(unless = "#result == null")
 	@Override
 	public Account getAccount(Long accountId) {
 		LOG.info("Trying to get Account information for id {} ", accountId);
