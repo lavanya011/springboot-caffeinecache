@@ -10,7 +10,7 @@ import com.apallapu.service.AccountService;
 
 @RestController
 public class AccountController {
-
+        int a;
 	@Autowired
 	AccountService accountService;
 
